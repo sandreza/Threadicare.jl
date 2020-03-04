@@ -1,6 +1,13 @@
+name = "Threadicare"
+uuid = "6bebe134-8e4e-46a4-851f-e6b6e8bb0722"
+authors = ["sandreza <andrenogueirasouza@gmail.com>"]
+version = "0.1.0"
+
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CUDAapi = "3895d2a7-ec45-59b8-82bb-cfc6a382f9b3"
 CuArrays = "3a865a2d-5b23-5a0f-bc46-62713ec82fae"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
