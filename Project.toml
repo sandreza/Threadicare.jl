@@ -1,5 +1,6 @@
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CuArrays = "3a865a2d-5b23-5a0f-bc46-62713ec82fae"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
 Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
