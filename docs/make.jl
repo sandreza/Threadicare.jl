@@ -1,5 +1,5 @@
-using Documenter, Threadicare
 push!(LOAD_PATH,"../src/")
+using Documenter, Threadicare
 
 format = Documenter.HTML(
     collapselevel = 1,
