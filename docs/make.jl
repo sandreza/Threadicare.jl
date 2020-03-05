@@ -1,11 +1,19 @@
-push!(LOAD_PATH,"../src/")
 using Documenter, Threadicare
 
-format = Documenter.HTML(
-    collapselevel = 1,
-       prettyurls = get(ENV, "CI", nothing) == "true",
-        canonical = "https://sandreza.github.io/Threadicare.jl/latest/"
+makedocs(
+     modules = [Threadicare],
+       clean = true,
+     doctest = false,
+   checkdocs = :all,
+      format = Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true"),
+     authors = "Andre N. Souza",
+    sitename = "Threadicare.jl",
+
+       pages = Any[
+                "Home" => "index.md"
+                      ]
 )
 
-makedocs(sitename="Documentation")
-deploydocs(repo = "github.com/sandreza/Threadicare.jl.git")
+deploydocs(
+  repo = "github.com/sandreza/Threadicare.jl.git",
+)

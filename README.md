@@ -1,8 +1,7 @@
-# Threadicare
+Threadicare.jl
+==============
 A daycare for threads
 
-</p>
-  <a href="https://github.com/sandreza/Threadicare.jl/latest">
-    <img alt="Latest documentation" src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square">
-  </a>
-</p>
+| **Documentation**             | **Build Status**                    | **License** |
+|:-----------------------------:|:-----------------------------------:|:-----------:|
+| [![docs][docs-img]][docs-url] | [![travis][travis-img]][travis-url] |[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://mit-license.org/)|
