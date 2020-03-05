@@ -1,4 +1,7 @@
+# Modified from https://juliagpu.gitlab.io/KernelAbstractions.jl/examples/matmul/
+
 using KernelAbstractions, Test, CUDAapi, BenchmarkTools
+
 if CUDAapi.has_cuda_gpu()
     using CuArrays
     CuArrays.allowscalar(false)
