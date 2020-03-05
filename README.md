@@ -14,5 +14,5 @@ A daycare for threads
 [docs-img]: https://img.shields.io/badge/docs-latest-blue.svg
 [docs-url]: https://sandreza.github.io/Threadicare.jl/latest/
 
-[travis-img]: https://travis-ci.org/sandreza/Threadicare.jl.svg?branch=master
-[travis-url]: https://travis-ci.org/sandreza/Threadicare.jl
+[travis-img]: https://travis-ci.com/sandreza/Threadicare.jl.svg?branch=master
+[travis-url]: https://travis-ci.com/sandreza/Threadicare.jl
