@@ -17,6 +17,17 @@ end
     c[i,j] = tmp_sum
 end
 
+@kernel function matmul_kernel_2!(a, b, c)
+    i, j = @index(Global, NTuple)
+
+    # creating a temporary sum variable for matrix multiplication
+    c[i,j] = zero(eltype(c))
+    for k = 1:size(a)[2]
+        c[i,j] += a[i,k] * b[k, j]
+    end
+
+end
+
 # Creating a wrapper kernel for launching with error checks
 function matmul!(a, b, c)
     if size(a)[2] != size(b)[1]
@@ -27,6 +38,20 @@ function matmul!(a, b, c)
         kernel! = matmul_kernel!(CPU(),4)
     else
         kernel! = matmul_kernel!(CUDA(),256)
+    end
+    kernel!(a, b, c, ndrange=size(c))
+end
+
+# Creating a wrapper kernel for launching with error checks
+function matmul_2!(a, b, c)
+    if size(a)[2] != size(b)[1]
+        println("Matrix size mismatch!")
+        return nothing
+    end
+    if isa(a, Array)
+        kernel! = matmul_kernel_2!(CPU(),4)
+    else
+        kernel! = matmul_kernel_2!(CUDA(),256)
     end
     kernel!(a, b, c, ndrange=size(c))
 end
