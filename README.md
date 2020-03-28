@@ -1,6 +1,6 @@
 Threadicare.jl
 ==============
-A daycare for threads
+A daycare for threads!
 
 | **Documentation**             | **Build Status**                    | **License** |
 |:-----------------------------:|:-----------------------------------:|:-----------:|
