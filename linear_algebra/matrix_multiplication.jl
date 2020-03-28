@@ -46,10 +46,8 @@ end
 end
 
 @kernel function matmul_kernel_3!(@Const(a), @Const(b), c)
-   i, j = @index(Global, NTuple)
-
+    i, j = @index(Global, NTuple)
     # creating a temporary sum variable for matrix multiplication
-
     c[i,j] = zero(eltype(c))
     for k = 1:size(a)[2]
         c[i,j] += a[i,k] * b[k, j]
@@ -68,6 +66,23 @@ function matmul!(a, b, c)
         kernel! = matmul_kernel!(CUDA(),256)
     end
     kernel!(a, b, c, ndrange=size(c))
+end
+
+function closure_matmul!(matmul_kernel!; cpu_threads = 4, gpu_blocks = 256)
+    # Creating a wrapper kernel for launching with error checks
+    function matmul!(a, b, c)
+        if size(a)[2] != size(b)[1]
+            println("Matrix size mismatch!")
+            return nothing
+        end
+        if isa(a, Array)
+            kernel! = matmul_kernel!(CPU(), cpu_threads)
+        else
+            kernel! = matmul_kernel!(CUDA(), gpu_blocks)
+        end
+        kernel!(a, b, c, ndrange=size(c))
+    end
+    return matmul!
 end
 
 # Creating a wrapper kernel for launching with error checks
