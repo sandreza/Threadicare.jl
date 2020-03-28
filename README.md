@@ -12,7 +12,7 @@ A daycare for threads
 [Andre Souza](https://sandreza.github.io/)
 
 [docs-img]: https://img.shields.io/badge/docs-latest-blue.svg
-[docs-url]: https://sandreza.github.io/Threadicare.jl/latest/
+[docs-url]: https://sandreza.github.io/Threadicare.jl/stable
 
 [travis-img]: https://travis-ci.com/sandreza/Threadicare.jl.svg?branch=master
 [travis-url]: https://travis-ci.com/sandreza/Threadicare.jl
