@@ -15,4 +15,8 @@ import Base:
     getindex, lastindex, setindex!,
     push!
 
+include("test.jl")
+
+export test_args
+
 end # module

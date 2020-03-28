@@ -9,7 +9,7 @@ A daycare for threads
 
 # Authors
 
-[Andre Souza](sandreza.github.io)
+[Andre Souza](https://sandreza.github.io/)
 
 [docs-img]: https://img.shields.io/badge/docs-latest-blue.svg
 [docs-url]: https://sandreza.github.io/Threadicare.jl/latest/
