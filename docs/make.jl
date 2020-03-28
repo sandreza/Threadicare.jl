@@ -4,7 +4,7 @@ using Documenter, Threadicare
 makedocs(
      modules = [Threadicare],
        clean = true,
-     doctest = false,
+     doctest = true,
    checkdocs = :all,
       format = Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true"),
      authors = "Andre N. Souza",
@@ -15,6 +15,4 @@ makedocs(
                       ]
 )
 
-deploydocs(
-  repo = "github.com/sandreza/Threadicare.jl.git",
-)
+deploydocs(repo = "github.com/sandreza/Threadicare.jl.git")
